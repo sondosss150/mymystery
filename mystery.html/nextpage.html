@@ -1,0 +1,109 @@
+<!-- darkclue.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Series Clue</title>
+    
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V94H4LJJXD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-V94H4LJJXD');
+</script>
+<body><div id="symbol"><img src="C:\Users\AdMin\Pictures\Saved Pictures\Design sans titre (3).png" ></div>
+    <div> 
+        <h1><font size="+5">"The end is the beginning, and the beginning is the end."</font></h1>
+       
+        
+        <input type="text" id="episodeInput" placeholder="two sides of the same coin">
+        <button onclick="checkEpisode()">Submit</button>
+        <p id="feedback"></p>
+    </div>
+    <script>
+        function checkEpisode() {
+            const input = document.getElementById('episodeInput').value.toLowerCase();
+            const feedback = document.getElementById('feedback');
+            
+            if(input === 'light and shadow') {  // The correct episode name
+                window.location.href = 'nextpage1.html';  // Move to the final page
+            } else {
+                feedback.textContent = 'Incorrect.';
+                feedback.style.color = 'red';
+            }
+        }
+    </script>
+</body>
+</html>
+<style>
+      body {
+            font-family: 'Georgia', serif;
+            background-color: #fdf3f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .container {
+            text-align: center;
+            background-color: #fff0f6;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            max-width: 350px;
+            width: 100%;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 12px 15px;
+            font-size: 16px;
+            border: 2px solid #ffccd5;
+            border-radius: 8px;
+            outline: none;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            background-color: #fffafc;
+            font-family: 'Georgia', serif;
+            color: #333;
+            
+        }
+        input[type="text"]:focus {
+            border-color: #ffb3c1;
+            box-shadow: 0 0 8px rgba(255, 179, 193, 0.5);
+        }
+        button {
+            margin-top: 15px;
+            padding: 12px 25px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #ff8fa3;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            font-family: 'Georgia', serif;
+        }
+        button:hover {
+            background-color: #ff6f8b;
+            transform: scale(1.05);
+        }
+        #feedback {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #bf4b63;
+            font-family: 'Georgia', serif;
+
+        }
+        #symbol{
+            height:30px;
+            width: 30px;
+            color: white;
+            border-radius: 50%;
+        }
+</style>

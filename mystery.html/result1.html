@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidden Hotspots</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #fdf3f7;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+    
+        .container {
+            position: relative;
+            width: 80vw;
+            max-width: 800px;
+            height: 60vh;
+            border-radius: 20px;
+            background-image: url('file:///C:/Users/AdMin/Downloads/se7en-brad-pitt-morgan-freeman.webp');
+            background-size: cover;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            border: 3px solid #ffccd5;
+            overflow: hidden;
+        }
+        .hotspot {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: transparent; /* Make the hotspot invisible */
+    border: none; /* Remove the border */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.hotspot:hover {
+    transform: scale(1.2);
+     /* Keep the hover effect without changing color */
+}
+        
+        .clue {
+            position: absolute;
+            display: none;
+            width: 200px;
+            padding: 10px;
+            background-color: #fff0f6;
+            border: 2px solid #ffccd5;
+            border-radius: 10px;
+            font-size: 16px;
+            font-family: 'Georgia', serif;
+            color: #bf4b63;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+        .show-clue {
+            display: block;
+        }
+    </style>
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V94H4LJJXD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-V94H4LJJXD');
+</script>
+<body>
+
+<div class="container">
+    <div class="hotspot" style="top: 20%; left: 30%;" onclick="showClue('clue1')"></div>
+    <div class="hotspot" style="top: 60%; left: 70%;" onclick="showClue('clue2')"></div>
+    <div class="hotspot" style="top: 50%; left: 20%;" onclick="showClue('clue3')"></div>
+    <div class="hotspot" style="top: 40%; left: 50%;" onclick="showClue('clue4')"></div>
+    <div class="hotspot" style="top: 10%; left: 80%;" onclick="showClue('clue5')"></div>
+    <div class="hotspot" style="top: 70%; left: 40%;" onclick="showClue('clue6')"></div>
+    <div class="hotspot" style="top: 20%; left: 20%;" onclick="showClue('clue7')"></div>
+    
+    <div id="clue1" class="clue" style="top: 10%; left: 40%;">01101100</div>
+    <div id="clue2" class="clue" style="top: 50%; left: 80%;">01110010</div>
+    <div id="clue3" class="clue" style="top: 40%; left: 30%;">01100110</div>
+    <div id="clue4" class="clue" style="top: 30%; left: 55%;">01101111</div>
+    <div id="clue5" class="clue" style="top: 15%; left: 65%;">00001010</div>
+    <div id="clue6" class="clue" style="top: 60%; left: 45%;">01110111</div>
+    <div id="clue7" class="clue" style="top: 20%; left: 20%;">00001010</div>
+</div>
+
+<div class="container1">
+    <h2>What's in the box?</h2>
+    <input type="text" id="answerInput" class="answer-input" placeholder="Your answer...">
+    <button class="submit-button" onclick="checkAnswer()">Submit</button>
+    <p id="feedback" class="feedback"></p></div>
+
+<script>
+    function showClue(id) {
+        const clue = document.getElementById(id);
+        clue.classList.toggle('show-clue');
+    }
+    function checkAnswer() {
+        const userAnswer = document.getElementById('answerInput').value.trim().toLowerCase();
+        const feedback = document.getElementById('feedback');
+        
+        if (userAnswer === 'flowers') {
+            feedback.textContent = "Correct! Well done!";
+            feedback.style.color = "green";
+            // You can redirect to another page here if needed
+            setTimeout(function() {https://rewar.my.canva.site/
+                window.location.href = "";  // Replace with your next page URL
+        }, 1000);
+            
+            
+            
+        } else {
+            feedback.textContent = "Wrong answer, please try again.";
+            feedback.style.color = "red";
+        }
+    }
+</script>
+<style>
+    body {
+        font-family: 'Georgia', serif;
+        background-color: #fdf3f7;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .container1 {
+        text-align: center;
+    }
+    .answer-input {
+        margin-top: 10px;
+        padding: 8px;
+        width: 200px;
+        border: 2px solid #ffb3c1;
+        border-radius: 5px;
+        font-family: 'Georgia', serif;
+    }
+    .submit-button {
+        background-color: #ffb3c1;
+        color: #fff;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: 'Georgia', serif;
+        margin-top: 10px;
+    }
+    .submit-button:hover {
+        background-color: #ff809f;
+    }
+    .feedback {
+        margin-top: 10px;
+        font-family: 'Georgia', serif;
+        font-size: 18px;
+    }
+</style>
+</body>
+</html>

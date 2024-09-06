@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coquette Quiz</title>
+  <style>
+
+
+
+body {
+  font-family: 'Cursive', sans-serif;
+  background-color: #ffe6f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.quiz-container {
+  text-align: center;
+  background-color: #fff0f6;
+  border: 2px solid #ff99cc;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  color: #ff66a3;
+  font-size: 36px;
+}
+
+input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  margin: 15px 0;
+  border: 1px solid #ff99cc;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+button {
+  background-color: #ff66a3;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ff3399;
+}
+
+#feedback {
+  color: #33cc33;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+  </style>
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V94H4LJJXD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-V94H4LJJXD');
+</script>
+<body>
+  <div class="quiz-container">
+    <h1>Coquette Quiz</h1>
+    <p>Enter the answer to proceed:</p>
+    <input type="text" id="answer" placeholder="Enter answer here...">
+    <button onclick="checkAnswer()">Submit</button>
+    <p id="feedback" style="display: none;">Correct! Redirecting...</p>
+  </div>
+
+  <script >
+
+
+function checkAnswer() {
+  const userAnswer = document.getElementById('answer').value.toLowerCase();
+  const feedback = document.getElementById('feedback');
+
+  if (userAnswer === 'piano') {
+    feedback.style.display = 'block'; // Show feedback message
+    setTimeout(() => {
+      window.location.href = "nextpage.html"; // Redirect to the next page after 1 second
+    }, 1000);
+  } else {
+    alert('Incorrect answer! Try again.');
+  }
+}
+
+  </script>
+</body>
+</html>

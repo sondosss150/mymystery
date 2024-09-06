@@ -1,0 +1,48 @@
+
+   
+   body { font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFE6F7;
+    
+    background-size: cover; /* Ensures the image covers the entire background */
+     /* Centers the image */
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    color: whitesmoke;
+}
+
+.container {
+    text-align: center;
+    background-color: #FBA1B7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 80%;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #FFD1DA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #F65A83;
+}
+h1{
+    text-align: center;
+}

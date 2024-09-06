@@ -1,0 +1,77 @@
+<!-- choicepage.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Your Choice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V94H4LJJXD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-V94H4LJJXD');
+</script>
+<body>
+    <div class="container">
+        <h1>"Life is a coin. Spend it in any way but only once."</h1>
+        <p>Make your choice wisely. Each path is unique and can be chosen only once.</p>
+        <div class="choices">
+            <button id="button1" onclick="makeChoice('choice1')">Choice 1</button>
+            <button id='button2'onclick="makeChoice('choice2')">Choice 2</button>
+            
+        </div>
+        <p id="feedback"></p>
+    </div>
+    <script>
+        // Function to handle choices
+        function makeChoice(choice) {
+            const feedback = document.getElementById('feedback');
+            
+            // Logic for different choices
+            if(choice === 'choice1') {
+                feedback.textContent = 'You chose Choice 1. Proceed to the next step.';
+                feedback.style.color = 'red';
+                window.location.href = 'result1.html';  // Redirect to a specific page for Choice 1
+            } else if(choice === 'choice2') {
+                feedback.textContent = 'You chose Choice 2. Proceed to the next step.';
+                feedback.style.color = 'blue';
+                window.location.href = 'https://rewar.my.canva.site/adam-script';  // Redirect to a specific page for Choice 
+            } 
+        }
+    </script>
+</body>
+<style>
+body{background-image: url('https://cdn.vox-cdn.com/thumbor/aT5iVAt-LWNKwuaNw4ehOQEHZqU=/0x0:1920x1088/1200x0/filters:focal(0x0:1920x1088):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/9994067/morpheus_matrix.jpg')
+
+}
+.container{
+    opacity: 0.7;
+}
+#button1{
+   background-color: red;
+}
+#button2{
+    background-color:blue;
+}
+#button3{
+    background-color: green;
+}
+#button1:hover {
+    background-color: gray;
+}
+#button2:hover{
+    background-color: gray;
+}
+#button3:hover{
+    background-color: gray;
+}
+</style>
+
+
+
+</html>
